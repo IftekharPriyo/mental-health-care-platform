@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { createContext, useState } from 'react';
 import './App.css';
+import Auth from './Components/Auth/Auth';
+import Navigation from './Components/Navigation/Navigation';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser,setLoggedInUser] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <Navigation></Navigation>
+        <Auth></Auth>
+      </UserContext.Provider>
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.logoName {
+  margin-left: 10px;
+}
+
+.navElems {
+  margin-right: 50px;
+  font-size: 120%;
+}
+
+.signIn {
+  font-size: 120%;
+  border: 1px solid black;
+  border-radius: 10%;
+  background-color: #30475e;
+}
