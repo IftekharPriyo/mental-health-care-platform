@@ -19,7 +19,8 @@ const Auth = () => {
         console.log('test');
         handleGoogleSignIn()
             .then(res => {
-                handleResponse(res,true)
+                handleResponse(res,true);
+                console.log(res);
             })
     }
     const handleResponse = (res, redirect) =>{

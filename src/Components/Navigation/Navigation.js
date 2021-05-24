@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { UserContext } from '../../App';
 import './Navigation.css';
 
 const Navigation = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <>
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -21,7 +23,10 @@ const Navigation = () => {
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link className='signIn' href="#signin">SignIn</Nav.Link>
+      {
+        loggedInUser.email? <Nav.Link style={{color: 'white'}} href="#link">{loggedInUser.name}</Nav.Link> :
+        <Nav.Link className='signIn' href="#signin">SignIn</Nav.Link>
+      } 
     </Nav>
   </Navbar.Collapse>
 </Navbar>
