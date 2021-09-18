@@ -12,7 +12,7 @@ const Navigation = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ml-auto">
-      <Nav.Link className='navElems' href="#aboutUs">About Us</Nav.Link>
+      <Nav.Link className='navElems' href="http://localhost:3000/">Forum Chat</Nav.Link>
       <Nav.Link className='navElems' href="#chatbot">Chatbot</Nav.Link>
       <NavDropdown className='navElems' title="Forum" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Forum 1</NavDropdown.Item>
